@@ -61,15 +61,8 @@
       <div class="external">
          <div class="middle">
             <div class="internal">
-               <h1 class="w3-round-xlarge w3-center">Hola</h1>
-               <h1 class="w3-round-xlarge w3-center" id="divNombre"><b></b></H1>
-               <h2 class="w3-round-xlarge w3-center">llevas</h2>
-               <h1 class="w3-center w3-pink w3-jumbo dias w3-text-white" id="divDays"></H1>
-               <h1 class="w3-round-xlarge w3-center w3-pink-text"><b>días</b></h1>
-               <h2 class="w3-round-xlarge w3-center">siendo</h2>
-               <h1 class="w3-round-xlarge w3-center" id="divFam"></H1>
-               <h1 class="w3-round-xlarge w3-center w3-text-pink"><b>de la princesa </b></h1>
-               <h1 class="w3-round-xlarge w3-center w3-text-pink w3-jumbo"><b>Emma Samantha</b></h1>
+
+               <img src="emma.png" alt="Emma" style="width:100%">
             </div>
             <div class="w3-margin-64 w3-padding-64"></div>
             
@@ -111,26 +104,7 @@
       </div>
    </div>
    <script>
-      const urlParams = new URLSearchParams(window.location.search);
-      const nombre = urlParams.get("nombre");
-      const fam = urlParams.get("fam");
-      var divNombre = document.getElementById('divNombre');
-      divNombre.innerHTML = nombre;
-      var divFam = document.getElementById('divFam');
-      divFam.innerHTML = fam;
 
-      function alterText() {
-         document.getElementById('divDays').innerHTML = daysbtw();
-      }
-      function daysbtw() {
-         var day1 = new Date('12/24/2023');
-         var day2 = new Date();
-
-         var difference = Math.abs(day2 - day1);
-         var days = difference / (1000 * 3600 * 24);
-         var days = Math.ceil(days);
-         return days
-      }
       function calcular() {
          // Obtenemos los valores de los campos de texto
          const names = document.querySelector("input[name='names']").value;
