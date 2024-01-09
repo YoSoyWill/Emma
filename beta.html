@@ -26,7 +26,7 @@
       }
 
       body {
-         background-image: url('https://img.freepik.com/vector-premium/patron-princesa-linda-rosa-fondo-transparente-corona-rosa-estrellas-doradas-sobre-fondo-blanco-puede-utilizar-rellenos-patron-papel-tapiz-texturas-superficiales-fondo-pagina-web-ilustracion-vectorial_166089-850.jpg');
+         background-image: url('https://static.vecteezy.com/system/resources/previews/002/449/672/non_2x/princess-crown-seamless-pattern-background-free-vector.jpg');
          min-height: 5%;
          background-position: center;
          background-size: cover;
@@ -50,7 +50,7 @@
       .internal {
          margin-left: auto;
          margin-right: auto;
-         width: 80%;
+         width: 400px;
       }
    </style>
 </head>
@@ -61,34 +61,17 @@
          <div class="middle">
             <div class="internal">
                <h1 class="w3-round-xlarge w3-center">Hola</h1>
-               <h1 class="w3-round-xlarge w3-center" id="divNombre"><b></b></h1>
+               <h1 class="w3-round-xlarge w3-xxxlarge w3-center" id="divNombre"><b></b></h1>
                <h2 class="w3-round-xlarge w3-center">llevas</h2>
-                              
-<table class="w3-table w3-card-4">
-<tr>
-<th><h1 class="w3-center w3-pink w3-jumbo dias w3-text-white" id="divDays"></h1></th>
-<th><h1 class="w3-center w3-pink w3-jumbo dias w3-text-white" id="divHours"></h1></th>
-<th><h1 class="w3-center w3-pink w3-jumbo dias w3-text-white" id="divMins"></h1></th>
-</tr>
-<tr>
-<th><h1 class="w3-round-xlarge w3-center w3-pink-text"><b>Días</b></h1></th>
-<th><h1 class="w3-round-xlarge w3-center w3-pink-text"><b>Horas</b></h1></th>
-<th><h1 class="w3-round-xlarge w3-center w3-pink-text"><b>Minutos</b></h1></th>
-</tr>
-</table>
 
-               
-               
-
-               
-               
-
-               
-               
-
-
+               <h1 class="w3-monospace w3-center w3-jumbo dias w3-text-pink" id="divDays"></h1>
+               <!-- <h1 class="w3-round-xlarge w3-center w3-pink-text"><b>días</b></h1>-->
+               <h1 class="w3-center  w3-xxxlarge dias w3-text-pink" id="divHours"></h1>
+               <!-- <h1 class="w3-round-xlarge w3-center w3-pink-text"><b>Horas</b></h1>-->
+               <h1 class="w3-center  w3-xxlarge dias w3-text-pink" id="divMins"></h1>
+              <!-- <h1 class="w3-round-xlarge w3-center w3-pink-text"><b>Minutos</b></h1>-->
                <h2 class="w3-round-xlarge w3-center">siendo</h2>
-               <h1 class="w3-round-xlarge w3-center" id="divFam"></h1>
+               <h1 class="w3-round-xlarge w3-xxxlarge w3-center" id="divFam"></h1>
                <h1 class="w3-round-xlarge w3-center w3-text-pink"><b>de la princesa </b></h1>
                <h1 class="w3-round-xlarge w3-center w3-text-pink w3-jumbo"><b>Emma Samantha</b></h1>
             </div>
@@ -129,7 +112,8 @@
 
          var difference = Math.abs(day2 - day1);
          var days = difference / (1000 * 60 * 60 * 24);
-         var days = Math.floor(days);
+         var days = Math.ceil(days);
+         var days = days + " días";
          return days;
       }
             function hoursbtw() {
@@ -139,6 +123,7 @@
          var difference = Math.abs(day2 - day1);
          var hours = difference / (1000 * 60 * 60);
          var hours = Math.floor(hours);
+         var hours = hours + " horas";
          return hours;
 
       }
@@ -149,14 +134,9 @@
          var difference = Math.abs(day2 - day1);
          var mins = difference / (1000 * 60 );
          var mins = Math.floor(mins);
+         var mins = mins + " minutos";
          return mins;
       }
-      // Función actualizar
-function actualizar(){
-  location.reload(true)
-}
-// Función para actualizar cada 4 segundos(4000 milisegundos)
-setInterval("actualizar()",60000);
    </script>
 </body>
 <footer>
