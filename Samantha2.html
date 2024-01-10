@@ -70,6 +70,7 @@
                <h1 class="w3-center  w3-xxxlarge dias w3-text-pink" id="divHours"></h1>
                <!-- <h1 class="w3-round-xlarge w3-center w3-pink-text"><b>Horas</b></h1>-->
                <h1 class="w3-center  w3-xxlarge dias w3-text-pink" id="divMins"></h1>
+               <h1 class="w3-center  w3-xxlarge dias w3-text-pink" id="divFecha"></h1>
               <!-- <h1 class="w3-round-xlarge w3-center w3-pink-text"><b>Minutos</b></h1>-->
                <h2 class="w3-round-xlarge w3-center">siendo</h2>
                <h1 class="w3-round-xlarge w3-xxxlarge w3-center" id="divFam"></h1>
@@ -102,6 +103,8 @@
       divNombre.innerHTML = nombre;
       var divFam = document.getElementById('divFam');
       divFam.innerHTML = fam;
+      var divFecha = document.getElementById('divFecha');
+      divFecha.innerHTML = fechahora;
 
       function alterText() {
          document.getElementById('divDays').innerHTML = daysbtw();
