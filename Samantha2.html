@@ -14,12 +14,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
    <style>
+   :root {
+  --fondo: white;
+  --letras: blue; 
+}
       body,
       h1,
       h2 {
          font-family: 'Glass Antiqua', cursive;
+         color : var(--letras);
       }
-      .dias {font-family: 'Kablammo', system-ui;}
+      .dias {font-family: 'Kablammo', system-ui;
+      color : var(--letras);
+      }
 
       body,
       html {
@@ -27,7 +34,8 @@
       }
 
       body {
-         background-image: url('https://static.vecteezy.com/system/resources/previews/002/449/672/non_2x/princess-crown-seamless-pattern-background-free-vector.jpg');
+      background-color : var(--fondo);
+         /*background-image: url('https://static.vecteezy.com/system/resources/previews/002/449/672/non_2x/princess-crown-seamless-pattern-background-free-vector.jpg');*/
          min-height: 5%;
          background-position: center;
          background-size: cover;
@@ -53,6 +61,11 @@
          margin-right: auto;
          width: 400px;
       }
+      .buttons {
+      background-color : blue;
+      color : white;
+      border: 2px solid blue;
+      }
    </style>
 </head>
 
@@ -65,22 +78,23 @@
                <h1 class="w3-round-xlarge w3-xxxlarge w3-center" id="divNombre"><b></b></h1>
                <h2 class="w3-round-xlarge w3-center">llevas</h2>
 
-               <h1 class="w3-monospace w3-center w3-jumbo dias w3-text-pink" id="divDays"></h1>
+               <h1 class="w3-monospace w3-center w3-jumbo dias" id="divDays"></h1>
                <!-- <h1 class="w3-round-xlarge w3-center w3-pink-text"><b>días</b></h1>-->
-               <h1 class="w3-center  w3-xxxlarge dias w3-text-pink" id="divHours"></h1>
+               <h1 class="w3-center  w3-xxxlarge dias " id="divHours"></h1>
                <!-- <h1 class="w3-round-xlarge w3-center w3-pink-text"><b>Horas</b></h1>-->
-               <h1 class="w3-center  w3-xxlarge dias w3-text-pink" id="divMins"></h1>
-               <h1 class="w3-center  w3-xxlarge dias w3-text-pink" id="divFecha"></h1>
+               <h1 class="w3-center  w3-xxlarge dias " id="divMins"></h1>
+               <h1 class="w3-center  w3-xxlarge dias " id="divFecha"></h1>
               <!-- <h1 class="w3-round-xlarge w3-center w3-pink-text"><b>Minutos</b></h1>-->
                <h2 class="w3-round-xlarge w3-center">siendo</h2>
                <h1 class="w3-round-xlarge w3-xxxlarge w3-center" id="divFam"></h1>
-               <h1 class="w3-round-xlarge w3-center w3-text-pink"><b>de la princesa </b></h1>
-               <h1 class="w3-round-xlarge w3-center w3-text-pink w3-jumbo"><b>Emma Samantha</b></h1>
+               <h2 class="w3-round-xlarge w3-center">de</h2>
+               <h1 class="w3-monospace w3-center w3-jumbo dias" id="divBaby"></h1>
+
             </div>
             <div class="w3-margin-64 w3-padding-64"></div>
 <div class="w3-margin-64 w3-padding-64 w3-center">
    <a  href="https://yosoywill.github.io/Emma/">
-      <button onclick="https://yosoywill.github.io/Emma/" class="w3-button w3-pink w3-center">Mi contador</button>
+      <button onclick="https://yosoywill.github.io/Emma/" class="w3-button buttons w3-center">Mi contador</button>
     </a>
 
 </div>
@@ -98,13 +112,19 @@
       const urlParams = new URLSearchParams(window.location.search);
       const nombre = urlParams.get("nombre");
       const fam = urlParams.get("fam");
+      const baby =urlParams.get("baby");
       const fechahora = urlParams.get("fechahora");
+      var fondo = urlParams.get("fondo");
+      var letras = urlParams.get("letras");
       var divNombre = document.getElementById('divNombre');
       divNombre.innerHTML = nombre;
       var divFam = document.getElementById('divFam');
       divFam.innerHTML = fam;
+      var divBaby = document.getElementById('divBaby');
+      divBaby.innerHTML = baby;
       var divFecha = document.getElementById('divFecha');
       divFecha.innerHTML = fechahora;
+      
 
       function alterText() {
          document.getElementById('divDays').innerHTML = daysbtw();
@@ -155,6 +175,11 @@
          return min;
 
       }
+//var fondo = 'blue';
+//var letras = 'red';
+var bodyStyles = document.body.style;
+bodyStyles.setProperty('--fondo', fondo);
+bodyStyles.setProperty('--letras', letras);
    </script>
 </body>
 <footer>
