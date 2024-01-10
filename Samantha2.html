@@ -91,16 +91,19 @@
       const urlParams = new URLSearchParams(window.location.search);
       const nombre = urlParams.get("nombre");
       const fam = urlParams.get("fam");
+      const fecha = urlParams.get("fecha");
       var divNombre = document.getElementById('divNombre');
       divNombre.innerHTML = nombre;
       var divFam = document.getElementById('divFam');
       divFam.innerHTML = fam;
+      var divFecha = document.getElementById('divFecha');
+      divFecha.innerHTML = fecha;
 
       function alterText() {
          document.getElementById('divDays').innerHTML = daysbtw();
       }
       function daysbtw() {
-         var day1 = new Date('12/24/2023');
+         var day1 = new Date(fecha);
          var day2 = new Date();
 
          var difference = Math.abs(day2 - day1);
