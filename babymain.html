@@ -94,20 +94,20 @@
                            <option value="Tía">Tía</option>
                         </select>
                         <select class="w3-input" name="fondo">
-                           <option value="azul">Azul</option>
-                           <option value="rosa">Rosa</option>
-                           <option value="verde">Verde</option>
-                           <option value="amarillo">Amarillo</option>
+                           <option value="blue">Azul</option>
+                           <option value="pink">Rosa</option>
+                           <option value="green">Verde</option>
+                           <option value="yellow">Amarillo</option>
                            </select>
                           <select class="w3-input" name="letras">
-                           <option value="azul">Azul</option>
-                           <option value="rosa">Rosa</option>
-                           <option value="verde">Verde</option>
-                           <option value="amarillo">Amarillo</option>
+                           <option value="blue">Azul</option>
+                           <option value="pink">Rosa</option>
+                           <option value="green">Verde</option>
+                           <option value="yellow">Amarillo</option>
                            </select>
-                           <input type="datetime-local" name="fechahora" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}-[0-9]{2}:[0-9]{2}">
+                           <input class="w3-input" type="datetime-local" name="fechahora" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}-[0-9]{2}:[0-9]{2}">
                           <input class="w3-input" type="text" name="baby" placeholder="Nombre de bebé">
-                        <button class="w3-btn w3-block w3-round-xxlarge w3-gray w3-margin w3-center" type="button"
+                        <button class="w3-btn w3-block w3-round-xxlarge w3-pink w3-margin w3-center" type="button"
                            onclick="calcular()">Magia</button>
                      </form>
                     </div>
@@ -125,9 +125,9 @@
          const family = document.querySelector("select[name='family']").value;
          const fondo = document.querySelector("select[name='fondo']").value;
          const letras = document.querySelector("select[name='letras']").value;
-         const fechahora = document.querySelector("select[name="fechahora"]").value;
+         const fechahora = document.querySelector("input[name='fechahora']").value;
          // Realizamos la operación
-         const Magia = "https://yosoywill.github.io/Emma/babycount.html?nombre=" + names + "&fam=" + family + "&fondo" + fondo + "&letras" + letras + "&fechahora" + fecha + "&baby" + baby;
+         const Magia = "https://yosoywill.github.io/Emma/babycount.html?nombre=" + names + "&fam=" + family + "&fondo=" + fondo + "&letras=" + letras + "&fechahora=" + fechahora + "&baby=" + baby;
 
          // Mostramos el resultado
          window.open(Magia)
