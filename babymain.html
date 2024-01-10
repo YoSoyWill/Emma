@@ -12,14 +12,14 @@
    <link href="https://fonts.googleapis.com/css2?family=Glass+Antiqua&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
    <style>
       body,
       h1,
       h2 {
          font-family: 'Glass Antiqua', cursive;
       }
-      .dias {font-family: 'Kablammo', system-ui;}
+      .dias {font-family: 'Concert One', sans-serif;}
 
       body,
       html {
@@ -93,6 +93,19 @@
                            <option value="Tío">Tío</option>
                            <option value="Tía">Tía</option>
                         </select>
+                        <select class="w3-input" name="fondo">
+                           <option value="azul">Azul</option>
+                           <option value="rosa">Rosa</option>
+                           <option value="verde">Verde</option>
+                           <option value="amarillo">Amarillo</option>
+                           </select>
+                          <select class="w3-input" name="letras">
+                           <option value="azul">Azul</option>
+                           <option value="rosa">Rosa</option>
+                           <option value="verde">Verde</option>
+                           <option value="amarillo">Amarillo</option>
+                           </select>
+                          <input class="w3-input" type="text" name="baby" placeholder="Nombre de bebé">
                         <button class="w3-btn w3-block w3-round-xxlarge w3-pink w3-margin w3-center" type="button"
                            onclick="calcular()">Magia</button>
                      </form>
@@ -107,10 +120,12 @@
       function calcular() {
          // Obtenemos los valores de los campos de texto
          const names = document.querySelector("input[name='names']").value;
+         const baby = document.querySelector("input[name='baby']").value;
          const family = document.querySelector("select[name='family']").value;
-
+         const fondo = document.querySelector("select[name='fondo']").value;
+         const letras = document.querySelector("select[name='letras']").value;
          // Realizamos la operación
-         const Magia = "https://yosoywill.github.io/Emma/babycount.html?nombre=" + names + "&fam=" + family;
+         const Magia = "https://yosoywill.github.io/Emma/babycount.html?nombre=" + names + "&fam=" + family + "&fondo" + fondo + "&letras" + letras + "&fechahora" + fecha + "&baby" + baby;
 
          // Mostramos el resultado
          window.open(Magia)
