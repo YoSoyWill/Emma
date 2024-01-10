@@ -93,13 +93,15 @@
                            <option value="Tío">Tío</option>
                            <option value="Tía">Tía</option>
                         </select>
-                        <select class="w3-input" name="fondo">
+                        <input type="color" name="fondo" value="#ffffff" />
+                        <input type="color" name="letras" value="#000000" />
+                       <select class="w3-input" name="fondos">
                            <option value="blue">Azul</option>
                            <option value="pink">Rosa</option>
                            <option value="green">Verde</option>
                            <option value="yellow">Amarillo</option>
                            </select>
-                          <select class="w3-input" name="letras">
+                          <select class="w3-input" name="letrass">
                            <option value="blue">Azul</option>
                            <option value="pink">Rosa</option>
                            <option value="green">Verde</option>
@@ -123,8 +125,8 @@
          const names = document.querySelector("input[name='names']").value;
          const baby = document.querySelector("input[name='baby']").value;
          const family = document.querySelector("select[name='family']").value;
-         const fondo = document.querySelector("select[name='fondo']").value;
-         const letras = document.querySelector("select[name='letras']").value;
+         const fondo = document.querySelector("input[name='fondo']").value;
+         const letras = document.querySelector("input[name='letras']").value;
          const fechahora = document.querySelector("input[name='fechahora']").value;
          // Realizamos la operación
          const Magia = "https://yosoywill.github.io/Emma/babycount.html?nombre=" + names + "&fam=" + family + "&fondo=" + fondo + "&letras=" + letras + "&fechahora=" + fechahora + "&baby=" + baby;
