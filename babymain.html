@@ -129,10 +129,7 @@
          let letras = document.querySelector("input[name='letras']").value;
          let fechahora = document.querySelector("input[name='fechahora']").value;
 
-         Sí, hay que quitar el # del hex para que la función parseInt() lo interprete correctamente. En el ejemplo que proporcionaste, la cadena #FF0000 se puede convertir a un número de la siguiente manera:
-
-JavaScript
-let fondo = "#FFFFFF";  // Valor hexadecimal inicial
+        // Sí, hay que quitar el # del hex para que la función parseInt() lo interprete correctamente. En el ejemplo que proporcionaste, la cadena #FF0000 se puede convertir a un número de la siguiente manera:
 
 // Extraer los valores RGB del valor hexadecimal:
 fondo = fondo.slice(1);
