@@ -128,12 +128,19 @@
          let fondo = document.querySelector("input[name='fondo']").value;
          let letras = document.querySelector("input[name='letras']").value;
          let fechahora = document.querySelector("input[name='fechahora']").value;
-         
-         //Extraer los valores RGB del valor hexadecimal:
-fondo = fondo.match(/.{2}/g).map(hex => parseInt(hex, 16));
+
+         Sí, hay que quitar el # del hex para que la función parseInt() lo interprete correctamente. En el ejemplo que proporcionaste, la cadena #FF0000 se puede convertir a un número de la siguiente manera:
+
+JavaScript
+let fondo = "#FFFFFF";  // Valor hexadecimal inicial
+
+// Extraer los valores RGB del valor hexadecimal:
+fondo = fondo.slice(1);
 
 // Construir el formato RGB como cadena:
-fondo = `RGB(${fondo.slice(0, 3).join(",")})`;
+fondo = `RGB(${fondo.match(/.{2}/g).map(hex => parseInt(hex, 16)).slice(0, 3).join(",")})`;
+         //Extraer los valores RGB del valor hexadecimal:
+
 
          // Extraer los valores RGB del valor hexadecimal:
 letras = letras.match(/.{2}/g).map(hex => parseInt(hex, 16));
