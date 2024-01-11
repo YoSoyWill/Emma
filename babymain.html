@@ -122,24 +122,26 @@
 
       function calcular() {
          // Obtenemos los valores de los campos de texto
-         const names = document.querySelector("input[name='names']").value;
-         const baby = document.querySelector("input[name='baby']").value;
-         const family = document.querySelector("select[name='family']").value;
-         const fondo = document.querySelector("input[name='fondo']").value;
-         const letras = document.querySelector("input[name='letras']").value;
-         const fechahora = document.querySelector("input[name='fechahora']").value;
-
-// Extraer los valores RGB del valor hexadecimal:
+         let names = document.querySelector("input[name='names']").value;
+         let baby = document.querySelector("input[name='baby']").value;
+         let family = document.querySelector("select[name='family']").value;
+         let fondo = document.querySelector("input[name='fondo']").value;
+         let letras = document.querySelector("input[name='letras']").value;
+         let fechahora = document.querySelector("input[name='fechahora']").value;
+         
+         //Extraer los valores RGB del valor hexadecimal:
 fondo = fondo.match(/.{2}/g).map(hex => parseInt(hex, 16));
 
 // Construir el formato RGB como cadena:
-fondo = `rgb(${fondo.join(", ")})`;
+fondo = `RGB(${fondo.slice(0, 3).join(",")})`;
 
          // Extraer los valores RGB del valor hexadecimal:
 letras = letras.match(/.{2}/g).map(hex => parseInt(hex, 16));
 
 // Construir el formato RGB como cadena:
-letras = `rgb(${letras.join(", ")})`;
+letras = `RGB(${letras.slice(0, 3).join(",")})`;
+
+
          // Realizamos la operación
          const Magia = "https://yosoywill.github.io/Emma/babycount.html?nombre=" + names + "&fam=" + family + "&fondo=" + fondo + "&letras=" + letras + "&fechahora=" + fechahora + "&baby=" + baby;
 
