@@ -128,6 +128,18 @@
          const fondo = document.querySelector("input[name='fondo']").value;
          const letras = document.querySelector("input[name='letras']").value;
          const fechahora = document.querySelector("input[name='fechahora']").value;
+
+// Extraer los valores RGB del valor hexadecimal:
+fondo = fondo.match(/.{2}/g).map(hex => parseInt(hex, 16));
+
+// Construir el formato RGB como cadena:
+fondo = `rgb(${fondo.join(", ")})`;
+
+         // Extraer los valores RGB del valor hexadecimal:
+letras = letras.match(/.{2}/g).map(hex => parseInt(hex, 16));
+
+// Construir el formato RGB como cadena:
+letras = `rgb(${letras.join(", ")})`;
          // Realizamos la operación
          const Magia = "https://yosoywill.github.io/Emma/babycount.html?nombre=" + names + "&fam=" + family + "&fondo=" + fondo + "&letras=" + letras + "&fechahora=" + fechahora + "&baby=" + baby;
 
