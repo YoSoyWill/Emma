@@ -84,31 +84,20 @@
                         <h2 class="w3-center">Formulario</h2>
                      </div>
                      <form class="w3-container w3-margin">
-                        <input class="w3-input" type="text" name="names" placeholder="Nombre">
-                        <select class="w3-input" name="family">
+                        <p>Nombre de familiar <input class="w3-input" type="text" name="names" placeholder="Nombre"></p>
+                        <p>Condición de familiar <select class="w3-input" name="family">
                            <option value="Papá">Papá</option>
                            <option value="Mamá">Mamá</option>
                            <option value="Abuelo">Abuelo</option>
                            <option value="Abuela">Abuela</option>
                            <option value="Tío">Tío</option>
                            <option value="Tía">Tía</option>
-                        </select>
-                        <input type="color" name="fondo" value="#ffffff" />
-                        <input type="color" name="letras" value="#000000" />
-                       <select class="w3-input" name="fondos">
-                           <option value="blue">Azul</option>
-                           <option value="pink">Rosa</option>
-                           <option value="green">Verde</option>
-                           <option value="yellow">Amarillo</option>
-                           </select>
-                          <select class="w3-input" name="letrass">
-                           <option value="blue">Azul</option>
-                           <option value="pink">Rosa</option>
-                           <option value="green">Verde</option>
-                           <option value="yellow">Amarillo</option>
-                           </select>
-                           <input class="w3-input" type="datetime-local" name="fechahora" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}-[0-9]{2}:[0-9]{2}">
-                          <input class="w3-input" type="text" name="baby" placeholder="Nombre de bebé">
+                        </select><p>
+                        <p>Color de fondo <input class="w3-block" type="color" name="fondo" value="#ffffff" /></p>
+                        <p>Color de letras <input class="w3-block" type="color" name="letras" value="#000000" /></p>
+
+                           <p>Fecha de Nacimiento <input class="w3-input" type="datetime-local" name="fechahora" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}-[0-9]{2}:[0-9]{2}"></p>
+                          <p>Nombre de bebé  <input class="w3-input" type="text" name="baby" placeholder="Nombre de bebé"></p>
                         <button class="w3-btn w3-block w3-round-xxlarge w3-pink w3-margin w3-center" type="button"
                            onclick="calcular()">Magia</button>
                      </form>
@@ -139,11 +128,11 @@ fondo = `RGB(${fondo.match(/.{2}/g).map(hex => parseInt(hex, 16)).slice(0, 3).jo
          //Extraer los valores RGB del valor hexadecimal:
 
 
-         // Extraer los valores RGB del valor hexadecimal:
-letras = letras.match(/.{2}/g).map(hex => parseInt(hex, 16));
+letras = letras.slice(1);
 
 // Construir el formato RGB como cadena:
-letras = `RGB(${letras.slice(0, 3).join(",")})`;
+letras = `RGB(${letras.match(/.{2}/g).map(hex => parseInt(hex, 16)).slice(0, 3).join(",")})`;
+
 console.log(fondo);
          console.log(letras);
 
