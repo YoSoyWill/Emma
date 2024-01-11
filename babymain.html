@@ -140,7 +140,8 @@ letras = letras.match(/.{2}/g).map(hex => parseInt(hex, 16));
 
 // Construir el formato RGB como cadena:
 letras = `RGB(${letras.slice(0, 3).join(",")})`;
-
+console.log(fondo);
+         console.log(letras);
 
          // Realizamos la operación
          const Magia = "https://yosoywill.github.io/Emma/babycount.html?nombre=" + names + "&fam=" + family + "&fondo=" + fondo + "&letras=" + letras + "&fechahora=" + fechahora + "&baby=" + baby;
