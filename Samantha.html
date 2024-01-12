@@ -53,6 +53,15 @@
          width: 400px;
       }
    </style>
+   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(function(OneSignal) {
+    OneSignal.init({
+      appId: "c9d5f758-1cfc-49d5-bd4f-0bf069978852",
+    });
+  });
+</script>
 </head>
 
 <body onload="javascript:alterText()">
@@ -79,6 +88,7 @@
 <div class="w3-margin-64 w3-padding-64 w3-center">
    <a  href="https://yosoywill.github.io/Emma/">
       <button onclick="https://yosoywill.github.io/Emma/" class="w3-button w3-pink w3-center">Mi contador</button>
+      <div class='w3-button w3-pink w3-center onesignal-customlink-container'></div>
     </a>
 
 </div>
